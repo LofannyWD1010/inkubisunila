@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:padding="10dp"
+    android:background="@drawable/item_divider"
+    android:layout_height="250dp">
+
+    <FrameLayout
+        android:id="@+id/detail_gambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_loading"
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/progress_animation"/>
+
+            <ImageView
+                android:id="@+id/iv_gambar_pakan"
+                android:layout_width="200dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_tipe_pakan"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sapi"
+            android:padding="5dp"
+            android:textColor="#ffffff"
+            android:background="#cc038a4b"/>
+
+        <TextView
+            android:id="@+id/tv_iklan_tayang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tayang"
+            android:drawableLeft="@drawable/ic_check_black_24dp"
+            android:drawablePadding="10dp"
+            android:padding="5dp"
+            android:layout_gravity="right|bottom"
+            android:textColor="#ffffff"
+            android:background="#cc5c6bc0"/>
+
+        <TextView
+            android:id="@+id/tv_iklan_tarik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak Tayang"
+            android:drawableLeft="@drawable/ic_clear_black_24dp"
+            android:drawablePadding="10dp"
+            android:padding="5dp"
+            android:layout_gravity="right|bottom"
+            android:textColor="#ffffff"
+            android:background="#cc8a0503"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_nama_pakan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detail_gambar"
+        android:text="Pakan Sapi Penggemukan"
+        android:textSize="18dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_below="@+id/tv_nama_pakan"
+        android:id="@+id/tv_harga_pakan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp. 2.500/Kg"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_ubah"
+        android:text="Ubah"
+        android:textColor="#ffffff"
+        android:background="@drawable/btn_primary_selector"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
+
+</RelativeLayout>

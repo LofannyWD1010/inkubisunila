@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.unila.inkubis.RequestPenjualActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:titleTextColor="#ffffff"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@mipmap/logo_fix"
+                android:layout_gravity="center"
+                />
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#ffffff">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+                    </LinearLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_nomor"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nomor Identitas Unila"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="number"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#ededed"/>
+
+                    <TextView
+                        android:id="@+id/tv_keterangan_identitas"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:text="Identitas Universitas Lampung"/>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pilih Civitas"
+                                android:textSize="12dp"/>
+
+                            <Spinner
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/sp_civitas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pilih Fakultas"
+                                android:textSize="12dp"/>
+
+                            <Spinner
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/sp_fakultas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pilih Jurusan"
+                                android:textSize="12dp"/>
+
+                            <Spinner
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/sp_jurusan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+<!--                    </android.support.design.widget.TextInputLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Civitas Akademika"-->
+<!--                        android:textSize="12dp"/>-->
+
+<!--                    <Spinner-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:id="@+id/sp_status_civitas"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Fakultas"-->
+<!--                        android:textSize="12dp"/>-->
+
+<!--                    <Spinner-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:id="@+id/sp_status_fakultas"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Jurusan"-->
+<!--                        android:textSize="12dp"/>-->
+
+<!--                    <Spinner-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:id="@+id/sp_status_jurusan"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Lokasi Produk"-->
+                    <!--android:textSize="12dp"/>-->
+
+                    <!--<Spinner-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:id="@+id/sp_lokasi"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="2dp"-->
+                    <!--android:background="#ededed"/>-->
+
+                    <Button
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:padding="5dp"
+                        android:id="@+id/btn_tambah_foto"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/btn_primary_selector"
+                        android:text="Upload Bukti Identitas"/>
+
+                    <HorizontalScrollView
+                        android:id="@+id/scrollView"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/fl_1"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:scaleType="fitXY"
+                                    android:id="@+id/iv_foto1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="150dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Foto Utama"
+                                    android:textColor="#ffffff"
+                                    android:padding="5dp"
+                                    android:background="@color/colorPrimaryDark"/>
+
+                                <Button
+                                    android:id="@+id/ganti_1"
+                                    android:layout_width="75dp"
+                                    android:layout_height="30dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/btn_outline_selector"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:text="Ganti Foto"
+                                    android:textSize="8dp"
+                                    android:layout_gravity="right|bottom"/>
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/fl_2"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:scaleType="fitXY"
+                                    android:id="@+id/iv_foto2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="150dp"/>
+
+                                <Button
+                                    android:id="@+id/ganti_2"
+                                    android:layout_width="75dp"
+                                    android:layout_height="30dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/btn_outline_selector"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:text="Ganti Foto"
+                                    android:textSize="8dp"
+                                    android:layout_gravity="right|bottom"/>
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/fl_3"
+                                android:layout_marginLeft="10dp"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:scaleType="fitXY"
+                                    android:id="@+id/iv_foto3"
+                                    android:layout_width="200dp"
+                                    android:layout_height="150dp"/>
+
+                                <Button
+                                    android:id="@+id/ganti_3"
+                                    android:layout_width="75dp"
+                                    android:layout_height="30dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/btn_outline_selector"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:text="Ganti Foto"
+                                    android:textSize="8dp"
+                                    android:layout_gravity="right|bottom"/>
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+
+
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="2dp"-->
+                    <!--android:background="#ededed"/>-->
+
+                    <!--<EditText-->
+                    <!--android:id="@+id/et_telp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableLeft="@drawable/ic_local_phone_primary_24dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="Nomor Telepon"-->
+                    <!--android:backgroundTint="@android:color/transparent"-->
+                    <!--android:inputType="number"/>-->
+
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_tambah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_primary_selector"
+                android:text="REQUEST PENJUAL"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

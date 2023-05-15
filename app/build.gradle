@@ -1,0 +1,199 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.unila.inkubis"
+        minSdkVersion 16
+        targetSdkVersion 31
+        versionCode 14
+        versionName "1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            buildConfigField 'String', "tutorialBeli", tutorialBeli
+            buildConfigField 'String', "tutorialPesanan", tutorialPesanan
+            buildConfigField 'String', "tutorialRequest", tutorialRequest
+            buildConfigField 'String', "host", host
+            buildConfigField 'String', "login", login
+            buildConfigField 'String', "register", register
+            buildConfigField 'String', "kirimUlangOTP", kirimUlangOTP
+            buildConfigField 'String', "updateProfil", updateProfil
+            buildConfigField 'String', "ambilProfil", ambilProfil
+            buildConfigField 'String', "daftarPencairan", daftarPencairan
+            buildConfigField 'String', "tambahPencairan", tambahPencairan
+            buildConfigField 'String', "aturLokasiTokoPenjual", aturLokasiTokoPenjual
+            buildConfigField 'String', "lokasiTokoPenjual", lokasiTokoPenjual
+            buildConfigField 'String', "jumlahTransaksi", jumlahTransaksi
+            buildConfigField 'String', "jumlahProduk", jumlahProduk
+            buildConfigField 'String', "ambilDetailPenjual", ambilDetailPenjual
+            buildConfigField 'String', "daftarProdukPenjual", daftarProdukPenjual
+            buildConfigField 'String', "daftarProdukHome", daftarProdukHome
+            buildConfigField 'String', "tambahProduk", tambahProduk
+            buildConfigField 'String', "ubahProduk", ubahProduk
+            buildConfigField 'String', "hapusProduk", hapusProduk
+            buildConfigField 'String', "daftarProdukKategori", daftarProdukKategori
+            buildConfigField 'String', "pencarianProduk", pencarianProduk
+            buildConfigField 'String', "tambahKeranjang", tambahKeranjang
+            buildConfigField 'String', "hapusKeranjang", hapusKeranjang
+            buildConfigField 'String', "daftarKeranjang", daftarKeranjang
+            buildConfigField 'String', "ubahIklanProduk", ubahIklanProduk
+            buildConfigField 'String', "stokKurang", stokKurang
+            buildConfigField 'String', "pesan", pesan
+            buildConfigField 'String', "ubahStatusPesan", ubahStatusPesan
+            buildConfigField 'String', "konfirmasiBayarPesan", konfirmasiBayarPesan
+            buildConfigField 'String', "tambahDetailPesan", tambahDetailPesan
+            buildConfigField 'String', "ubahStatusDikirim", ubahStatusDikirim
+            buildConfigField 'String', "ubahStatusDiterima", ubahStatusDiterima
+            buildConfigField 'String', "tambahSaldoPenjual", tambahSaldoPenjual
+            buildConfigField 'String', "daftarPesananBelum", daftarPesananBelum
+            buildConfigField 'String', "daftarPesananDiproses", daftarPesananDiproses
+            buildConfigField 'String', "daftarPesananDikirim", daftarPesananDikirim
+            buildConfigField 'String', "daftarPesananDiterima", daftarPesananDiterima
+            buildConfigField 'String', "daftarPesananBatal", daftarPesananBatal
+            buildConfigField 'String', "daftarPesananDiambil", daftarPesananDiambil
+            buildConfigField 'String', "ambilDetailPesanan", ambilDetailPesanan
+            buildConfigField 'String', "ambilDetailProduk", ambilDetailProduk
+            buildConfigField 'String', "ubahStatusDiambil", ubahStatusDiambil
+            buildConfigField 'String', "ubahStatusBatal", ubahStatusBatal
+            buildConfigField 'String', "cariKodeTransaksi", cariKodeTransaksi
+            buildConfigField 'String', "cekVersi", cekVersi
+            buildConfigField 'String', "setListNotifikasi", setListNotifikasi
+            buildConfigField 'String', "daftarListNotifikasi", daftarListNotifikasi
+            buildConfigField 'String', "jumlahListNotifikasi", jumlahListNotifikasi
+            buildConfigField 'String', "ubahStatusNotifikasi", ubahStatusNotifikasi
+            buildConfigField 'String', "kirimOTP", kirimOTP
+            buildConfigField 'String', "requestMitra", requestMitra
+            buildConfigField 'String', "getKurir", getKurir
+            buildConfigField 'String', "getKurirBeli", getKurirBeli
+            buildConfigField 'String', "updateKurir", updateKurir
+            buildConfigField 'String', "daftarRequestMitra", daftarRequestMitra
+            buildConfigField 'String', "requestPenjual", requestPenjual
+            buildConfigField 'String', "daftarKabupaten", daftarKabupaten
+            buildConfigField 'String', "daftarKecamatan", daftarKecamatan
+            buildConfigField 'String', "daftarOngkir", daftarOngkir
+            buildConfigField 'String', "daftarCivitas", daftarCivitas
+            buildConfigField 'String', "daftarFakultas", daftarFakultas
+            buildConfigField 'String', "daftarJurusan", daftarJurusan
+            buildConfigField 'String', "tambahOngkir", tambahOngkir
+            buildConfigField 'String', "ubahOngkir", ubahOngkir
+            buildConfigField 'String', "tarifOngkirKecamatan", tarifOngkirKecamatan
+        }
+        release {
+            buildConfigField 'String', "tutorialBeli", tutorialBeli
+            buildConfigField 'String', "tutorialPesanan", tutorialPesanan
+            buildConfigField 'String', "tutorialRequest", tutorialRequest
+            buildConfigField 'String', "host", host
+            buildConfigField 'String', "login", login
+            buildConfigField 'String', "register", register
+            buildConfigField 'String', "kirimUlangOTP", kirimUlangOTP
+            buildConfigField 'String', "updateProfil", updateProfil
+            buildConfigField 'String', "ambilProfil", ambilProfil
+            buildConfigField 'String', "daftarPencairan", daftarPencairan
+            buildConfigField 'String', "tambahPencairan", tambahPencairan
+            buildConfigField 'String', "aturLokasiTokoPenjual", aturLokasiTokoPenjual
+            buildConfigField 'String', "lokasiTokoPenjual", lokasiTokoPenjual
+            buildConfigField 'String', "jumlahTransaksi", jumlahTransaksi
+            buildConfigField 'String', "jumlahProduk", jumlahProduk
+            buildConfigField 'String', "ambilDetailPenjual", ambilDetailPenjual
+            buildConfigField 'String', "daftarProdukPenjual", daftarProdukPenjual
+            buildConfigField 'String', "daftarProdukHome", daftarProdukHome
+            buildConfigField 'String', "tambahProduk", tambahProduk
+            buildConfigField 'String', "ubahProduk", ubahProduk
+            buildConfigField 'String', "hapusProduk", hapusProduk
+            buildConfigField 'String', "daftarProdukKategori", daftarProdukKategori
+            buildConfigField 'String', "pencarianProduk", pencarianProduk
+            buildConfigField 'String', "tambahKeranjang", tambahKeranjang
+            buildConfigField 'String', "hapusKeranjang", hapusKeranjang
+            buildConfigField 'String', "daftarKeranjang", daftarKeranjang
+            buildConfigField 'String', "ubahIklanProduk", ubahIklanProduk
+            buildConfigField 'String', "stokKurang", stokKurang
+            buildConfigField 'String', "pesan", pesan
+            buildConfigField 'String', "ubahStatusPesan", ubahStatusPesan
+            buildConfigField 'String', "konfirmasiBayarPesan", konfirmasiBayarPesan
+            buildConfigField 'String', "tambahDetailPesan", tambahDetailPesan
+            buildConfigField 'String', "ubahStatusDikirim", ubahStatusDikirim
+            buildConfigField 'String', "ubahStatusDiterima", ubahStatusDiterima
+            buildConfigField 'String', "tambahSaldoPenjual", tambahSaldoPenjual
+            buildConfigField 'String', "daftarPesananBelum", daftarPesananBelum
+            buildConfigField 'String', "daftarPesananDiproses", daftarPesananDiproses
+            buildConfigField 'String', "daftarPesananDikirim", daftarPesananDikirim
+            buildConfigField 'String', "daftarPesananDiterima", daftarPesananDiterima
+            buildConfigField 'String', "daftarPesananBatal", daftarPesananBatal
+            buildConfigField 'String', "daftarPesananDiambil", daftarPesananDiambil
+            buildConfigField 'String', "ambilDetailPesanan", ambilDetailPesanan
+            buildConfigField 'String', "ambilDetailProduk", ambilDetailProduk
+            buildConfigField 'String', "ubahStatusDiambil", ubahStatusDiambil
+            buildConfigField 'String', "ubahStatusBatal", ubahStatusBatal
+            buildConfigField 'String', "cariKodeTransaksi", cariKodeTransaksi
+            buildConfigField 'String', "cekVersi", cekVersi
+            buildConfigField 'String', "setListNotifikasi", setListNotifikasi
+            buildConfigField 'String', "daftarListNotifikasi", daftarListNotifikasi
+            buildConfigField 'String', "jumlahListNotifikasi", jumlahListNotifikasi
+            buildConfigField 'String', "ubahStatusNotifikasi", ubahStatusNotifikasi
+            buildConfigField 'String', "kirimOTP", kirimOTP
+            buildConfigField 'String', "requestMitra", requestMitra
+            buildConfigField 'String', "getKurir", getKurir
+            buildConfigField 'String', "getKurirBeli", getKurirBeli
+            buildConfigField 'String', "updateKurir", updateKurir
+            buildConfigField 'String', "daftarRequestMitra", daftarRequestMitra
+            buildConfigField 'String', "requestPenjual", requestPenjual
+            buildConfigField 'String', "daftarKabupaten", daftarKabupaten
+            buildConfigField 'String', "daftarKecamatan", daftarKecamatan
+            buildConfigField 'String', "daftarOngkir", daftarOngkir
+            buildConfigField 'String', "daftarCivitas", daftarCivitas
+            buildConfigField 'String', "daftarFakultas", daftarFakultas
+            buildConfigField 'String', "daftarJurusan", daftarJurusan
+            buildConfigField 'String', "tambahOngkir", tambahOngkir
+            buildConfigField 'String', "ubahOngkir", ubahOngkir
+            buildConfigField 'String', "tarifOngkirKecamatan", tarifOngkirKecamatan
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:28.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.codesgood:justifiedtextview:1.0.2'
+    implementation 'com.github.mancj:SlideUp-Android:1.0-beta'
+    implementation 'com.github.paolorotolo:expandableheightlistview:1.0.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    implementation 'com.android.volley:volley:1.1.0'
+//    implementation 'com.google.android.gms:play-services-places:11.0.4'
+    implementation 'com.google.firebase:firebase-messaging:11.0.4'
+    implementation 'com.google.firebase:firebase-database:11.0.4'
+    implementation 'com.github.mreram:showcaseview:1.1'
+    implementation 'com.github.ganfra:material-spinner:2.0.0'
+    implementation 'com.alimuzaffar.lib:pinentryedittext:1.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.google.android.gms:play-services-maps:11.0.4'
+    implementation 'com.google.android.gms:play-services-location:11.0.4'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.+'
+    testImplementation 'junit:junit:4.12'
+    //noinspection GradleCompatible
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
+}

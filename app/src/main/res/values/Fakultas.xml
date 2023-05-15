@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fakultas">
+        <item>FEB</item>
+        <item>FH</item>
+        <item>FKIP</item>
+        <item>FP</item>
+        <item>FT</item>
+        <item>FISIP</item>
+        <item>FMIPA</item>
+        <item>FK</item>
+        <item>Sikubis</item>
+    </string-array>
+
+    <string-array name="feb">
+        <item>Akuntansi</item>
+        <item>Ekonomi Pembangunan</item>
+        <item>Manajemen</item>
+    </string-array>
+
+    <string-array name="fh">
+        <item>Ilmu Hukum</item>
+    </string-array>
+
+    <string-array name="fkip">
+        <item>IPA</item>
+        <item>IPS</item>
+    </string-array>
+
+    <string-array name="fp">
+        <item>Agroteknologi</item>
+        <item>Ilmu Tanah</item>
+        <item>Proteksi Tanaman</item>
+        <item>Agronomi dan Hortikultura</item>
+        <item>Agribisnis</item>
+        <item>Teknologi Hasil Pangan</item>
+        <item>Peternakan</item>
+        <item>Teknik Pertanian</item>
+        <item>Kehutanan</item>
+        <item>Perikanan dan Ilmu Kelautan</item>
+    </string-array>
+
+    <string-array name="ft">
+        <item>Teknik Sipil</item>
+        <item>Teknik Mesin</item>
+        <item>Teknik Elektro</item>
+        <item>Teknik Kimia</item>
+        <item>Teknik Geofisika</item>
+    </string-array>
+
+    <string-array name="fisip">
+        <item>Sosiologi</item>
+        <item>Ilmu Pemerintahan</item>
+        <item>Ilmu Komunikasi</item>
+        <item>Administrasi Negara</item>
+        <item>Administrasi Bisnis</item>
+        <item>Hubungan Internasional</item>
+    </string-array>
+
+    <string-array name="fmipa">
+        <item>Biologi</item>
+        <item>Kimia</item>
+        <item>Matematika</item>
+        <item>Fisika</item>
+        <item>Ilmu Komputer</item>
+    </string-array>
+
+    <string-array name="fk">
+        <item>Pendidikan Dokter</item>
+    </string-array>
+
+    <string-array name="sikubis">
+        <item>sikubis</item>
+    </string-array>
+</resources>

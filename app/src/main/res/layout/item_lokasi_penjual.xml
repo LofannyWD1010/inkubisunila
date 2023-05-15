@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_penjual_ke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Untuk Penjual Ke-"
+                android:textSize="12dp"/>
+
+            <Button
+                android:id="@+id/btn_atur_lokasi"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Atur Lokasi Pengiriman"
+                android:background="@drawable/btn_outline_selector"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_lokasi_antar"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi Antar Ke : "/>
+
+                <TextView
+                    android:id="@+id/tv_lokasi_antar"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bakauheni"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ongkir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarif Ongkir : "/>
+
+                <TextView
+                    android:id="@+id/tv_ongkir"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 20.000"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_belum"
+                android:textColor="@android:color/holo_red_dark"
+                android:textStyle="bold"
+                android:text="Lokasi Belum Diatur"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

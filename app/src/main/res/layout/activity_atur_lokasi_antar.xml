@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AturLokasiAntarActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:titleTextColor="#ffffff"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_pengiriman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_location_on_black_24dp"
+                    android:tint="@color/colorPrimary"/>
+
+                <Spinner
+                    android:id="@+id/sp_wilayah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separator_pengiriman"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ededed"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_kota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_location_on_black_24dp"
+                    android:tint="@color/colorPrimary"/>
+
+                <Spinner
+                    android:id="@+id/sp_kota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/separator_kota"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ededed"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_kurir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_local_shipping_black_24dp"
+                    android:tint="@color/colorPrimary"/>
+
+                <Spinner
+                    android:id="@+id/sp_kurir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/separator_kurir"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ededed"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_layanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_local_shipping_black_24dp"
+                    android:tint="@color/colorPrimary"/>
+
+                <Spinner
+                    android:id="@+id/sp_layanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/separator_layanan"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ededed"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Tarif Ongkir : "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_tarif_ongkir"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_detail_alamat"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:hint="Detail Alamat"
+                    android:backgroundTint="@android:color/transparent"
+                    android:inputType="textMultiLine"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_atur_lokasi"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:text="Atur Lokasi"
+                android:padding="5dp"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_primary_selector"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inkubis Unila</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="wilayahs">
+        <item>Bandar Lampung</item>
+        <item>Metro</item>
+        <item>Lampung Barat</item>
+        <item>Lampung Selatan</item>
+        <item>Lampung Tengah</item>
+        <item>Lampung Timur</item>
+        <item>Lampung Utara</item>
+        <item>Mesuji</item>
+        <item>Pesawaran</item>
+        <item>Pringsewu</item>
+        <item>Tanggamus</item>
+        <item>Tulang Bawang</item>
+        <item>Tulang Bawang Barat</item>
+        <item>Way Kanan</item>
+        <item>Pesisir Barat</item>
+    </string-array>
+    <string name="title_activity_maps_toko">Map</string>
+
+</resources>
+

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "217106778338",
+    "project_id": "inkubis-unila",
+    "storage_bucket": "inkubis-unila.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217106778338:android:acf8eb60aeb138df1b36bb",
+        "android_client_info": {
+          "package_name": "com.unila.inkubis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217106778338-b3tv8je4nqsuupgvkc81jgm74jie8p6d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxJJBPXQrZ2vphGS1Ax9_BT2TyddPs_3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217106778338-b3tv8je4nqsuupgvkc81jgm74jie8p6d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

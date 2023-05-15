@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Beranda"/>
+
+    <item
+        android:id="@+id/navigation_pesan"
+        android:icon="@drawable/ic_event_note_black_24dp"
+        android:title="Pesanan"/>
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_blog"-->
+<!--        android:icon="@drawable/ic_content_paste_black_24dp"-->
+<!--        android:title="Informasi"/>-->
+
+    <item
+        android:id="@+id/navigation_help"
+        android:icon="@drawable/ic_help_black_24dp"
+        android:title="Bantuan"/>
+
+    <item
+        android:id="@+id/navigation_profil"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="Akun"/>
+
+</menu>

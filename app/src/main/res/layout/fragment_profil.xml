@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#ffffff"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".Fragment.ProfilFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/colorPrimary">
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_marginRight="20dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/iv_konsultasi"-->
+<!--                            android:padding="15dp"-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:tint="#ffffff"-->
+<!--                            android:background="@drawable/selector_green"-->
+<!--                            android:clickable="true"-->
+<!--                            android:src="@drawable/ic_chat_black_24dp"/>-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/iv_edit_profil"-->
+<!--                            android:padding="15dp"-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:background="@drawable/selector_green"-->
+<!--                            android:clickable="true"-->
+<!--                            android:tint="#ffffff"-->
+<!--                            android:src="@drawable/ic_edit_black_24dp"/>-->
+
+<!--                    </LinearLayout>-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Akun Saya"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_profil"
+                    android:layout_marginTop="50dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fachry Maulana Prabowo"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_nama"
+                        android:gravity="center"
+                        android:layout_marginTop="35dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="085780938970"
+                        android:textColor="#000000"
+                        android:id="@+id/tv_telp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_mitra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:text="Penjual"
+                        android:drawableTint="#ffee58"
+                        android:drawableLeft="@drawable/ic_star_black_24dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_saldo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:text="Rp. 120.000"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/ic_account_balance_wallet_black_24dp"/>
+
+                        <Button
+                            android:id="@+id/btn_cash_out"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Cash Out"
+                            android:drawableRight="@drawable/ic_exit_to_app_black_24dp"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="#ffffff"
+                            android:background="@drawable/btn_primary_selector"
+                            android:textColor="#ffffff"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pesanan Saya"
+                            android:textStyle="bold"
+                            android:textColor="#000000"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#dddddd"/>
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <FrameLayout
+                            android:id="@+id/fl_belum_dibayar"
+                            android:clickable="true"
+                            android:background="@drawable/selector"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_belum_bayar"/>
+
+                                <TextView
+                                    android:textSize="12dp"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Belum Dibayar"/>
+
+                            </LinearLayout>
+
+                            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                                <!--android:layout_width="10dp"-->
+                                <!--android:layout_height="10dp"-->
+                                <!--android:layout_gravity="right"-->
+                                <!--android:layout_margin="20dp"-->
+                                <!--android:src="@android:color/holo_red_dark"/>-->
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fl_diproses"
+                            android:clickable="true"
+                            android:background="@drawable/selector"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_paket_dikemas"/>
+
+                                <TextView
+                                    android:textSize="12dp"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diproses"/>
+
+                            </LinearLayout>
+
+                            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                                <!--android:layout_width="10dp"-->
+                                <!--android:layout_height="10dp"-->
+                                <!--android:layout_gravity="right"-->
+                                <!--android:layout_margin="20dp"-->
+                                <!--android:src="@android:color/holo_red_dark"/>-->
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fl_dikirim"
+                            android:clickable="true"
+                            android:background="@drawable/selector"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_paket_dikirim"/>
+
+                                <TextView
+                                    android:textSize="12dp"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dikirim"/>
+
+                            </LinearLayout>
+
+                            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                                <!--android:layout_width="10dp"-->
+                                <!--android:layout_height="10dp"-->
+                                <!--android:layout_gravity="right"-->
+                                <!--android:layout_margin="20dp"-->
+                                <!--android:src="@android:color/holo_red_dark"/>-->
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fl_diterima"
+                            android:clickable="true"
+                            android:background="@drawable/selector"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_paket_diterima"/>
+
+                                <TextView
+                                    android:textSize="12dp"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diterima"/>
+
+                            </LinearLayout>
+
+                            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                                <!--android:layout_width="10dp"-->
+                                <!--android:layout_height="10dp"-->
+                                <!--android:layout_gravity="right"-->
+                                <!--android:layout_margin="20dp"-->
+                                <!--android:src="@android:color/holo_red_dark"/>-->
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#dddddd"/>
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tab_profil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabMode="fixed"
+                        android:background="#ffffff"
+                        app:tabSelectedTextColor="@color/colorPrimaryDark"
+                        app:tabTextColor="@color/colorPrimary"
+                        app:tabIndicatorColor="@color/colorPrimaryDark"
+                        app:tabGravity="fill"/>
+
+                    <FrameLayout
+                        android:id="@+id/content_profil"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="12dp"
+                    android:src="#ffffff"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#dddddd"
+                    android:layout_height="80dp"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:id="@+id/iv_foto_profil"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/fachry"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#dddddd"
+                    android:layout_height="80dp"/>
+
+            </FrameLayout>
+
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_masuk"
+        android:background="#dddddd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:elevation="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anda Belum Login"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Harap mengisikan email dan password anda"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_email_masuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_password_masuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Password"
+                            android:inputType="textPassword"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/btn_masuk"
+                        android:textStyle="bold"
+                        android:background="@drawable/btn_primary_selector"
+                        android:text="Masuk"
+                        android:textColor="#ffffff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="60dp"
+                            android:layout_height="3dp"
+                            android:layout_marginRight="5dp"
+                            android:background="#ededed"/>
+
+                        <TextView
+                            android:text="Belum Punya Akun ?"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                        <View
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="60dp"
+                            android:layout_height="3dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="#ededed"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/btn_daftar_disini"
+                        android:textStyle="bold"
+                        android:background="@drawable/btn_outline_selector"
+                        android:text="Daftar Disini"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_daftar"
+        android:background="#dddddd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:elevation="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daftar Sekarang"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Harap isikan identitas anda"/>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_nama_daftar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nama Lengkap"
+                            android:inputType="text"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_email_daftar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_password_daftar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Password"
+                            android:inputType="textPassword"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_telp_daftar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nomor Handphone"
+                            android:inputType="number"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/sp_daerah"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_multiline="false"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_enableErrorLabel="false"
+                        app:ms_floatingLabelText="Daerah"
+                        app:ms_arrowSize="16dp"
+                        app:ms_alignLabels="false"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_alamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Alamat"
+                            android:inputType="text"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/btn_daftar"
+                        android:textStyle="bold"
+                        android:background="@drawable/btn_primary_selector"
+                        android:text="Daftar"
+                        android:textColor="#ffffff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="60dp"
+                            android:layout_height="3dp"
+                            android:layout_marginRight="5dp"
+                            android:background="#ededed"/>
+
+                        <TextView
+                            android:text="Sudah Punya Akun ?"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                        <View
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="60dp"
+                            android:layout_height="3dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="#ededed"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/btn_masuk_disini"
+                        android:textStyle="bold"
+                        android:background="@drawable/btn_outline_selector"
+                        android:text="Masuk Disini"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl_verifikasi"-->
+<!--        android:background="#dddddd"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <android.support.v7.widget.CardView-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:background="#ffffff"-->
+<!--            android:elevation="8dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <ScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <LinearLayout-->
+<!--                    android:padding="10dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Kode Verifikasi"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:textSize="20dp"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:text="Kami Telah Mengirimkan SMS Ke Nomor HP Anda"/>-->
+
+<!--                    <com.alimuzaffar.lib.pin.PinEntryEditText-->
+<!--                        android:id="@+id/et_kode"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:digits="1234567890"-->
+<!--                        android:cursorVisible="false"-->
+<!--                        android:inputType="number"-->
+<!--                        android:textSize="24dp"-->
+<!--                        android:maxLength="4" />-->
+
+<!--                    <Button-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:id="@+id/btn_verifikasi"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:background="@drawable/btn_primary_selector"-->
+<!--                        android:text="Verifikasi"-->
+<!--                        android:textColor="#ffffff"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"/>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <View-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:layout_width="60dp"-->
+<!--                            android:layout_height="3dp"-->
+<!--                            android:layout_marginRight="5dp"-->
+<!--                            android:background="#ededed"/>-->
+
+<!--                        <LinearLayout-->
+
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:gravity="center">-->
+
+<!--                            <TextView-->
+
+<!--                                android:text="SMS Belum Diterima ?  Kirim Ulang "-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"/>-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tv_detik"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:textColor="#000000"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:text="60"/>-->
+
+<!--                        </LinearLayout>-->
+
+
+<!--                        <View-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:layout_width="60dp"-->
+<!--                            android:layout_height="3dp"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:background="#ededed"/>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <Button-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:id="@+id/btn_kirim_ulang"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:background="@drawable/btn_outline_selector"-->
+<!--                        android:text="Kirim Ulang"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </ScrollView>-->
+
+<!--        </android.support.v7.widget.CardView>-->
+
+<!--    </RelativeLayout>-->
+
+</FrameLayout>

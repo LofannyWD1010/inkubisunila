@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context=".RequestMitraActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:titleTextColor="#ffffff"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_request"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo_white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Daftar Mitra"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Silahkan isi dan lengkapi data dan dokumen anda"
+                android:textColor="#eeeeee"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_peternak"
+                    android:background="@drawable/rb_selector"
+                    android:button="@android:color/transparent"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peternak"/>
+
+                <RadioButton
+                    android:id="@+id/rb_produsen"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/rb_selector"
+                    android:button="@android:color/transparent"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Produsen Pakan"/>
+
+                <RadioButton
+                    android:id="@+id/rb_petani"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/rb_selector"
+                    android:button="@android:color/transparent"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Petani"/>
+
+                <RadioButton
+                    android:id="@+id/rb_supplier"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/rb_selector"
+                    android:button="@android:color/transparent"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Supplier"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Peternak dapat menjual produk seperti kambing, sapi, domba, kuda, dll"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_width="0px"
+                        android:layout_height="0px"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="Nama"
+                            android:textSize="17dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <EditText
+                            android:id="@+id/et_nama"
+                            android:hint="Masukkan Nama"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="NIK"
+                            android:textSize="17dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <EditText
+                            android:id="@+id/et_nik"
+                            android:hint="Masukkan Nik"
+                            android:layout_width="0dp"
+                            android:inputType="number"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="Foto KTP"
+                            android:textSize="17dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <EditText
+                            android:id="@+id/et_foto_ktp"
+                            android:editable="false"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:hint="Pilih Foto"
+                            android:drawableRight="@drawable/ic_camera_alt_black_24dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_ktp"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_peternakan"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="Foto Peternakan"
+                            android:textSize="17dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <EditText
+                            android:id="@+id/et_foto_kandang"
+                            android:editable="false"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:hint="Pilih Foto"
+                            android:drawableRight="@drawable/ic_camera_alt_black_24dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_kandang"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_cppb"
+                        android:visibility="gone"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="Foto CPPB"
+                            android:textSize="17dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <EditText
+                            android:id="@+id/et_foto_cppb"
+                            android:editable="false"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:hint="Pilih Foto"
+                            android:drawableRight="@drawable/ic_camera_alt_black_24dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_cppb"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"/>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_supplier"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="Foto Sertifikat"
+                            android:textSize="17dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <EditText
+                            android:id="@+id/et_sertifikat"
+                            android:editable="false"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:hint="Pilih Foto"
+                            android:drawableRight="@drawable/ic_camera_alt_black_24dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_sertifikat"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"/>
+
+
+                    <CheckBox
+                        android:id="@+id/cb_syarat"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dengan ini saya menyetujui syarat dan ketentuan yang berlaku"/>
+
+                    <Button
+                        android:id="@+id/btn_daftar"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_primary_selector"
+                        android:layout_gravity="center"
+                        android:text="Daftar"
+                        android:textColor="#ffffff"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

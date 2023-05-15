@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LokasiPengirimanActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:titleTextColor="#ffffff"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"/>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:text="Daftar Pembelian"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_beli"
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_nama"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pakan Sapi"
+                                android:textStyle="bold"
+                                android:textSize="15dp"
+                                android:textColor="@color/colorPrimary"/>
+
+                            <TextView
+                                android:id="@+id/tv_harga"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rp. 20.000 / kg"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.4"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:gravity="center_vertical">
+
+                            <Button
+                                android:id="@+id/btn_kurang"
+                                android:layout_marginLeft="15dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/btn_circle_selector"
+                                android:text="-"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"/>
+
+                            <TextView
+                                android:id="@+id/tv_jumlah"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textColor="#000000"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="bold"
+                                android:textSize="18dp"/>
+
+                            <Button
+                                android:id="@+id/btn_tambah"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/btn_circle_selector"
+                                android:text="+"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                        android:id="@+id/lv_daftar_beli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#ededed"/>
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Harga : "
+                            android:gravity="right"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_total_harga"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. 0"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ededed"/>
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingin Ambil Pesanan Anda Sendiri ?"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <Switch
+                    android:id="@+id/sw_ambil"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ededed"/>
+
+            <TextView
+                android:id="@+id/tv_keterangan_kirim"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:text="Lokasi Pengiriman"/>
+
+            <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                android:id="@+id/lv_lokasi_penjual"
+                android:layout_width="match_parent"
+                android:divider="@null"
+                android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_lokasi_beli"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:focusable="true"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_pengiriman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_location_on_black_24dp"
+                            android:tint="@color/colorPrimary"/>
+
+                        <Spinner
+                            android:id="@+id/sp_wilayah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/separator_pengiriman"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#ededed"/>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_kota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_location_on_black_24dp"
+                            android:tint="@color/colorPrimary"/>
+
+                        <Spinner
+                            android:id="@+id/sp_kota"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/separator_kota"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#ededed"/>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_kurir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_local_shipping_black_24dp"
+                            android:tint="@color/colorPrimary"/>
+
+                        <Spinner
+                            android:id="@+id/sp_kurir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/separator_kurir"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#ededed"/>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_layanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_local_shipping_black_24dp"
+                            android:tint="@color/colorPrimary"/>
+
+                        <Spinner
+                            android:id="@+id/sp_layanan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/separator_layanan"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#ededed"/>
+
+                    <TextView
+                        android:id="@+id/tv_ambil"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anda akan mengambil pesanan anda sendiri, Anda dapat melihat lokasi toko penjual pada detail pesanan"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/et_detail_alamat"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:gravity="top"
+                        android:maxLines="5"
+                        android:layout_height="100dp"
+                        android:hint="Detail Alamat \n(Blok/Kelurahan/Kampung/Kecamatan)"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textMultiLine"/>
+
+                    <!--<View-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:background="#ededed"/>-->
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_telp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:backgroundTint="@android:color/transparent"-->
+                        <!--android:drawableLeft="@drawable/ic_call_black_24dp"-->
+                        <!--android:drawablePadding="10dp"-->
+                        <!--android:drawableTint="@color/colorPrimary"-->
+                        <!--android:hint="Nomor Telepon"-->
+                        <!--android:inputType="number"/>-->
+
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_konfirmasi"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lanjutkan"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_primary_selector"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_info_pembayaran">
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#ededed"/>
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:text="Rincian Pembayaran"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:text="Harga Produk : "
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/tv_rincian_harga"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:textColor="#000000"
+                                android:textStyle="bold"
+                                android:text="Rp. 22.500"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:text="Ongkos Kirim  : "
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/tv_rincian_ongkos"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:textColor="#000000"
+                                android:textStyle="bold"
+                                android:text="Rp. 5.000"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#ededed"/>
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="wrap_content"
+                                android:text="Total Yang Harus Dibayar :"
+                                android:textColor="#000000"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/tv_total_pembayaran"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="24dp"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="wrap_content"
+                                android:text="Rp. 27.500"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"/>
+
+                        </LinearLayout>
+
+
+                        <!--<View-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:background="#ededed"/>-->
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--<Button-->
+                        <!--android:id="@+id/btn_bayar_nanti"-->
+                        <!--android:layout_margin="10dp"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_weight="0.5"-->
+                        <!--android:textColor="@color/colorPrimary"-->
+                        <!--android:text="Bayar Nanti"-->
+                        <!--android:background="@drawable/btn_outline_selector"/>-->
+
+                    <Button
+                        android:id="@+id/btn_lanjut_bayar"
+                        android:layout_margin="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textColor="#ffffff"
+                        android:text="Lanjut Bayar"
+                        android:background="@drawable/btn_primary_selector"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
